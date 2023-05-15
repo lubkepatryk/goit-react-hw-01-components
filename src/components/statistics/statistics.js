@@ -1,5 +1,6 @@
 import data from './data.json';
 import PropTypes from 'prop-types';
+import './Statistics.css';
 
 export const Statistics = () => {
   return (
@@ -11,7 +12,7 @@ export const Statistics = () => {
             return (
               <li className="item" key={data.id}>
                 <span className="label">{data.label}</span>
-                <span className="percentage">{data.percentage}</span>
+                <span className="percentage">{data.percentage}%</span>
               </li>
             );
           })}
