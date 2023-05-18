@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types';
-import './statistics.css';
+import css from './Statistics.module.css';
 
-export const Statistics = ({ stats }) => {
+export const Statistics = ({ stats, title }) => {
   return (
     <>
-      <section className="statistics">
-        <h2 className="title">Upload stats</h2>
-        <ul className="stat-list">
+      <section className={css.statistics}>
+        {title && <h2 className={css.title}>Upload Statistics{title}</h2>}
+        <ul className={css.statList}>
           {stats.map(data => (
-            <li className="item" key={data.id}>
-              <span className="label">{data.label}</span>
-              <span className="percentage">{data.percentage}%</span>
+            <li className={css.item} key={data.id}>
+              <span className={css.label}>{data.label}</span>
+              <span className={css.percentage}>{data.percentage}%</span>
             </li>
           ))}
         </ul>
@@ -21,9 +21,10 @@ export const Statistics = ({ stats }) => {
 
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.arrayOf(PropTypes.shape)({
+  stats: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string,
     label: PropTypes.string,
     percentage: PropTypes.number,
-  }),
+  })
+  ),
 };
