@@ -1,8 +1,8 @@
 // import PropTypes from 'prop-types';
-import { Profile } from 'components/profile/Profile.js';
-import { Statistics } from 'components/statistics/Statistics.js';
-import { FriendList } from 'components/friendList/FriendList.js';
-import { TransactionHistory } from 'components/transactionHistory/TransactionHistory.js';
+import { Profile } from 'components/profile/Profile.jsx';
+import { Statistics } from 'components/statistics/Statistics.jsx';
+import { FriendList } from 'components/friendList/FriendList.jsx';
+import { TransactionHistory } from 'components/transactionHistory/TransactionHistory.jsx';
 import friends from '../data/friends.json';
 import user from '../data/user.json';
 import data from '../data/data.json';
